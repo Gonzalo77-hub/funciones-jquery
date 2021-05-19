@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <style>
+        .imagen {
+
+            height: 300px;
+
+        }
+        .tipolista{
+            list-style-type: disclosure-closed;
+            list-style-position: inside;
+        }
+        .imagen2{
+
+            width: 60%;
+            height: 350px;
+
+        }
+        .imagen3{
+
+        width: 70%;
+        height: 400px;
+
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+
+            <div class="row justify-content-center text-center">
+
+                <h1>Pagina para ocupar JQuery</h1>
+                <p>soy un parrafo del titulo</p>
+            </div>
+
+        </div>
+        <div class="text-center ">
+            <img class="img-fluid imagen" src="imagen/jujutsu.jpg">
+            <div class="col"> 
+                <div class="btn-group pt-3" role="group" aria-label="Basic example">
+                    <button type="button " class="btn btn-primary mostrar">Mostrar Imagen</button>
+                    <button type="button " class="btn btn-primary esconder">Ocultar Imagen</button>
+                  </div>
+            </div>
+
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col-4">
+                <h2>Lista anime antiguos</h2>
+                <ul class="list">
+                    <li>Cowboy Bepop</li>
+                    <li>Fullmetal Alchemist</li>
+                    <li>Death Note</li>
+                    <li>Dragon Ball z</li>
+                    <li>Astro Boy</li>
+                    <li>Samurai X</li>
+                </ul>
+
+
+                <button type="button" class="btn btn-primary desplegar"> Desplegar Lista</button>
+            </div>
+            <div class="col-4">
+                <h2>Lista anime Recomendados</h2>
+                <ul class="list2">
+                    <li>One Piece</li>
+                    <li>Naruto Shippuden</li>
+                    <li>Hunter x Hunter</li>
+                    <li>Attack on Titan</li>
+                    <li>Ghost in the Shell</li>
+                    <li>Hellsing Ultimate</li>
+                </ul>
+                <button type="button" class="btn btn-primary desplegar2"> Desplegar Lista</button>
+                <button type="button"  id= "boton2" class="btn btn-primary"> Agregar otro anime</button>
+            </div>
+
+
+            <div class="col-4">
+                <h2>Lista anime 2021</h2>
+                <ul class="list3">
+                    <li>jujutsu Kaisen</li>
+                    <li>Demon Slayer</li>
+                    <li>Nanatsu no Taizai</li>
+                    <li>Cell at Work</li>
+                    <li>Mi Hero Academia</li>
+                    <li>Dr Stone</li>
+                </ul>
+                <button type="button" class="btn btn-primary desplegar3"> Desplegar Lista</button>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row pt-4 text-center justify-content-center">
+                <img class="img-fluid imagen2" src="imagen/DrStone.jpg">
+                <div class="col-12 pt-3">
+                
+                <button type="button " class="btn btn-primary btn1">slideUp</button>
+                <button type="button " class="btn btn-primary btn2">slideDown</button>
+                <button type="button " class="btn btn-primary btn3">slidetoggle</button>
+                </div>      
+            </div>
+        </div>
+        <div class="container">
+            <div class="row pt-4 text-center justify-content-center">
+                <img class="img-fluid imagen3" src="imagen/dbz.jpg">
+                <div class="col-12 pt-3">
+                
+                <button type="button " class="btn btn-primary bot">Fadein</button>
+                <button type="button " class="btn btn-primary bot2">slideDown</button>
+                </div>      
+            </div>
+        </div>
+
+        </div>
+        
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+    <script>
+        /*  $('h1').html(" desde jquery"); */
+
+        $('.esconder').click(function () {
+            $('.imagen').hide();
+
+        })
+        $('.mostrar').click(function () {
+            $('.imagen').show();
+
+        })
+        $('ul').hide();
+
+        $('.desplegar').click(function () {
+            $('.list').toggle()
+
+        })
+        $('.desplegar2').click(function () {
+            $('.list2').toggle()
+
+        })
+        $('.desplegar3').click(function () {
+            $('.list3').toggle()
+
+        })
+        $('ul').addClass("tipolista");
+
+        $('.btn1').click(function(){
+        $('.imagen2').slideUp();
+        });
+
+        $('.btn2').click(function(){
+        $('.imagen2').slideDown();
+        });
+        
+        $('.btn3').click(function(){
+        $('.imagen2').slideToggle();
+        });
+
+        $('#boton2').click(function(){
+        
+            $('ul').append("<li> Otro anime</li>");
+        
+        });
+        $('.bot').click(function(){
+            $('.imagen3').fadeIn('slow');
+
+        })
+        $('.bot2').click(function(){
+            $('.imagen3').fadeOut(2000);
+
+        })
+
+    </script>
+</body>
+
+</html>
