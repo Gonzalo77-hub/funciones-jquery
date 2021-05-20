@@ -16,20 +16,23 @@
             height: 300px;
 
         }
-        .tipolista{
+
+        .tipolista {
             list-style-type: disclosure-closed;
             list-style-position: inside;
         }
-        .imagen2{
+
+        .imagen2 {
 
             width: 60%;
             height: 350px;
 
         }
-        .imagen3{
 
-        width: 70%;
-        height: 400px;
+        .imagen3 {
+
+            width: 70%;
+            height: 400px;
 
         }
     </style>
@@ -52,11 +55,11 @@
         </div>
         <div class="text-center ">
             <img class="img-fluid imagen" src="imagen/jujutsu.jpg">
-            <div class="col"> 
+            <div class="col">
                 <div class="btn-group pt-3" role="group" aria-label="Basic example">
                     <button type="button " class="btn btn-primary mostrar">Mostrar Imagen</button>
                     <button type="button " class="btn btn-primary esconder">Ocultar Imagen</button>
-                  </div>
+                </div>
             </div>
 
         </div>
@@ -86,7 +89,7 @@
                     <li>Hellsing Ultimate</li>
                 </ul>
                 <button type="button" class="btn btn-primary desplegar2"> Desplegar Lista</button>
-                <button type="button"  id= "boton2" class="btn btn-primary"> Agregar otro anime</button>
+                <button type="button" id="boton2" class="btn btn-primary"> Agregar otro anime</button>
             </div>
 
 
@@ -108,26 +111,78 @@
             <div class="row pt-4 text-center justify-content-center">
                 <img class="img-fluid imagen2" src="imagen/DrStone.jpg">
                 <div class="col-12 pt-3">
-                
-                <button type="button " class="btn btn-primary btn1">slideUp</button>
-                <button type="button " class="btn btn-primary btn2">slideDown</button>
-                <button type="button " class="btn btn-primary btn3">slidetoggle</button>
-                </div>      
+
+                    <button type="button " class="btn btn-primary btn1">slideUp</button>
+                    <button type="button " class="btn btn-primary btn2">slideDown</button>
+                    <button type="button " class="btn btn-primary btn3">slidetoggle</button>
+                </div>
             </div>
         </div>
         <div class="container">
             <div class="row pt-4 text-center justify-content-center">
-                <img class="img-fluid imagen3" src="imagen/dbz.jpg">
+                <img class="img-fluid imagen3" src="imagen/goku.png">
                 <div class="col-12 pt-3">
-                
-                <button type="button " class="btn btn-primary bot">Fadein</button>
-                <button type="button " class="btn btn-primary bot2">slideDown</button>
-                </div>      
+
+                    <button type="button " class="btn btn-primary bot">Fadein</button>
+                    <button type="button " class="btn btn-primary bot2">slideDown</button>
+                    <button type="button " class="btn btn-primary bot3">Cambia a goku de fase</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col">
+                    <p class="before">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil totam, voluptatum
+                        asperiores quae
+                        quos fugit fuga id sed rerum possimus nam quia, illo cum perferendis perspiciatis nulla
+                        consectetur natus! Voluptates.</p>
+                    <button type="button " class="btn btn-primary bot4">Agregar Parrafo Antes</button>
+                </div>
+                <div class="col">
+                    <p class="after">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quidem molestias at
+                        cumque
+                        doloremque distinctio non et dolores consequatur eos vero asperiores voluptas nihil facere
+                        temporibus modi, rem aliquam! Vero!</p>
+                    <button type="button " class="btn btn-primary bot5">Agregar Parrafo Despues</button>
+                </div>
+                <div class="col">
+                    <p class="cambiar">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit delectus hic enim
+                        ab laborum
+                        veritatis, autem reprehenderit. Reiciendis veritatis, quasi, possimus adipisci repellendus
+                        aliquid excepturi voluptate ex saepe rerum</p>
+                    <button type="button " class="btn btn-primary bot6">Cambiar parrafo a titulo</button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="container">
+            <div class="row pt-5">
+                <h3>CREA TU CUENTA</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Ingresa un Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Crea una Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <button id="validador" type="button" class="btn btn-primary">Validar Contraseña</button>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Crear</button>
+                </form>
             </div>
         </div>
 
-        </div>
-        
+    </div>
+
     </div>
 
 
@@ -170,31 +225,61 @@
         })
         $('ul').addClass("tipolista");
 
-        $('.btn1').click(function(){
-        $('.imagen2').slideUp();
+        $('.btn1').click(function () {
+            $('.imagen2').slideUp();
         });
 
-        $('.btn2').click(function(){
-        $('.imagen2').slideDown();
-        });
-        
-        $('.btn3').click(function(){
-        $('.imagen2').slideToggle();
+        $('.btn2').click(function () {
+            $('.imagen2').slideDown();
         });
 
-        $('#boton2').click(function(){
-        
+        $('.btn3').click(function () {
+            $('.imagen2').slideToggle();
+        });
+
+        $('#boton2').click(function () {
+
             $('ul').append("<li> Otro anime</li>");
-        
+
         });
-        $('.bot').click(function(){
+        $('.bot').click(function () {
             $('.imagen3').fadeIn('slow');
 
         })
-        $('.bot2').click(function(){
+        $('.bot2').click(function () {
             $('.imagen3').fadeOut(2000);
 
         })
+        $(".bot4").click(function () {
+
+            $(".before").before("<p>Hello world!</p>");
+
+        });
+        $(".bot5").click(function () {
+
+            $(".after").after("<p>Hello world!</p>");
+
+        });
+
+        $(".bot6").click(function () {
+
+            $(".cambiar").html("<h1>Cambiaste de parrafo a titulo</h1>");
+
+        });
+        $(".bot3").click(function () {
+
+           $(".imagen3").attr("src", "imagen/dbz.jpg");
+
+        });
+        $('#validador').click(function(){
+           let contra = $("#exampleInputPassword1").val();
+            if(contra.length < 7
+            ){
+                alert("La contraseña debe contener minimo un largo 7 ");
+            }
+
+        });
+
 
     </script>
 </body>
